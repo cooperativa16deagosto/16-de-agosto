@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #2d3748;
+  background-color: #f7fafc;
+  line-height: 1.6;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Barra de navegación */
+.barra-navegacion {
+  background-color: #ffffff;
+  border-bottom: 2px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.nav-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo a {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1a365d;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.menu-derecho ul {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.menu-derecho a {
+  text-decoration: none;
+  color: #4a5568;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.menu-derecho a:hover {
+  color: #c53030;
+}
+
+/* Marca la pestaña en la que el usuario está ubicado */
+.menu-derecho a.activo {
+  color: #c53030;
+  border-bottom: 2px solid #c53030;
+  font-weight: 700;
+}
+
+/* Área de contenido de cada página */
+.pagina-contenido {
+  padding: 3.5rem 0;
+  min-height: 75vh;
+}
+
+.titulo-pagina {
+  font-size: 2.2rem;
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta-blanca {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para tablas de horarios */
+.tabla-horarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.tabla-horarios th, .tabla-horarios td {
+  padding: 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-horarios th {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+/* Footer */
+footer {
+  background-color: #1a202c;
+  color: #a0aec0;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
