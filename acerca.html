@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de la Coop | Cooperativa 16 de Agosto</title>
+  <!-- Enlaces CSS -->
+     <link rel="icon" type="image/png" href="img/favico 16 de agosto.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= ENCABEZADO ================= -->
+  <header>
+    <div class="barra-lema">
+      <div class="contenedor">
+        <p>Tu destino y tus encomiendas en las mejores manos. Coop. 16 de Agosto: rápido, seguro y confiable en cada ruta.</p>
+      </div>
+    </div>
+
+    <div class="barra-navegacion">
+      <div class="contenedor nav-contenido">
+        
+        <div class="marca">
+          <a href="index.html" class="enlace-marca">
+            <img src="img/logotipo 16 de agosto .png" alt="Logotipo Cooperativa 16 de Agosto" class="logo-img">
+          </a>
+        </div>
+
+        <!-- Botón de menú hamburguesa (Oculto en PC, visible en celular) -->
+        <button class="menu-hamburguesa" id="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="menu-derecho">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            <!-- Inicio del Menú Desplegable -->
+            <li class="item-desplegable">
+              <!-- Mantenemos href="#" pero le dejamos la clase "activo" para la rayita roja -->
+              <a href="#" class="activo">Acerca de la Coop <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              
+              <ul class="sub-menu">
+                <li><a href="acerca.html">Nuestra historia</a></li>
+                <li><a href="redes.html">Nuestras redes sociales</a></li>
+              </ul>
+            </li>
+
+            <li class="item-desplegable">
+              <a href="#">Servicios <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              <ul class="sub-menu">
+                <li><a href="encomiendas.html">Encomiendas</a></li>
+              </ul>
+            </li>
+
+            <li><a href="horarios.html">Horarios</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= CONTENIDO DE "ACERCA DE" ================= -->
+  <main class="seccion-historia">
+    <div class="contenedor layout-historia">
+      
+      <!-- Columna Izquierda: Galería de fotos apiladas -->
+      <div class="columna-imagenes">
+        <img src="img/16 de agosto bus super antiguo 1.png" alt="Bus antiguo de la Cooperativa" class="img-historia">
+        <img src="img/16 de agosto bus super antiguo 2.jpg" alt="Bus clásico de la Cooperativa" class="img-historia">
+        <img src="img/16 de agosto bus nuevo dos buses 1.png" alt="Nuevas unidades" class="img-historia">
+        <img src="img/16 de agosto bus nuevo dos buses 2.png" alt="Flota moderna" class="img-historia">
+      </div>
+
+      <!-- Columna Derecha: Texto que te acompaña al bajar (Sticky) -->
+      <div class="columna-texto">
+        <div class="texto-pegajoso">
+          <p class="etiqueta-historia">NUESTRA TRAYECTORIA</p>
+          <h1 class="titulo-historia">43 años de experiencia en cada ruta</h1>
+          
+          <p class="parrafo-historia">
+            La <strong>Cooperativa de Transporte 16 de Agosto</strong> cuenta con una sólida trayectoria, brindando un servicio basado en la seguridad, la confianza y el compromiso inquebrantable desde nuestra fundación en 1983.
+          </p>
+          <p class="parrafo-historia">
+            A lo largo de estas más de cuatro décadas, hemos trabajado con dedicación para convertirnos en mucho más que un medio de transporte; nos enorgullece ser parte del camino y de las historias de miles de familias ecuatorianas.
+          </p>
+          <p class="parrafo-historia">
+            Nuestro objetivo es evolucionar cada día. Por ello, hemos transformado nuestra flota desde nuestros primeros vehículos clásicos hasta incorporar modernas unidades del año, ofreciendo la más alta calidad, tecnología, comodidad y puntualidad en cada uno de nuestros servicios.
+          </p>
+          <p class="parrafo-historia">
+            Agradecemos profundamente la confianza depositada en nosotros y reiteramos nuestro firme compromiso de continuar sirviéndoles con total responsabilidad. Siempre estamos con las puertas abiertas a sus sugerencias; escucharlos es lo que nos permite seguir creciendo y mejorando para ustedes.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= PIE DE PÁGINA ================= -->
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 Cooperativa de Transportes 16 de Agosto. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPT PARA EL MENÚ (AÑADIDO) ================= -->
+  <script>
+    // 1. Lógica del menú hamburguesa principal
+    const btnMenu = document.getElementById('btn-menu');
+    const menu = document.querySelector('.menu-derecho ul'); 
+
+    btnMenu.addEventListener('click', () => {
+      menu.classList.toggle('mostrar-menu');
+    });
+
+    // 2. Lógica de los submenús (Acerca de, Servicios)
+    const enlacesDesplegables = document.querySelectorAll('.item-desplegable > a');
+
+    enlacesDesplegables.forEach(enlace => {
+      enlace.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        const subMenu = this.nextElementSibling;
+        subMenu.classList.toggle('mostrar-submenu');
+      });
+    });
+  </script>
+</body>
+</html>

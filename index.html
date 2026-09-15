@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="icon" type="image/png" href="img/favico 16 de agosto.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Cooperativa 16 de Agosto</title>
@@ -8,40 +10,404 @@
 </head>
 <body>
 
-  <header class="barra-navegacion">
-    <div class="contenedor nav-contenido">
-      <div class="logo">
-        <a href="index.html">COOPERATIVA 16 DE AGOSTO</a>
+  <!-- ================= ENCABEZADO ================= -->
+  <header>
+    <!-- Bloque 1: Franja anaranjada con el lema -->
+    <div class="barra-lema">
+      <div class="contenedor">
+        <p>Tu destino y tus encomiendas en las mejores manos. Coop. 16 de Agosto: rapido, seguro y confiable en cada ruta.</p>
       </div>
-      <nav class="menu-derecho">
-        <ul>
-          <li><a href="index.html" class="activo">Home</a></li>
-          <li><a href="acerca.html">Acerca de la Coop</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="horarios.html">Horarios</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contáctanos</a></li>
-        </ul>
-      </nav>
+    </div>
+
+    <!-- Bloque 2: Logotipo, botón celular y menú -->
+    <div class="barra-navegacion">
+      <div class="contenedor nav-contenido">
+        
+        <!-- Logotipo -->
+        <div class="marca">
+          <a href="index.html" class="enlace-marca">
+            <img src="img/logotipo 16 de agosto .png" alt="Logotipo Cooperativa 16 de Agosto" class="logo-img">
+          </a>
+        </div>
+
+        <!-- Botón de menú hamburguesa (Oculto en PC, visible en celular) -->
+        <button class="menu-hamburguesa" id="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <!-- Menú a la derecha -->
+        <nav class="menu-derecho">
+          <ul>
+            <li><a href="index.html" class="activo">Home</a></li>
+            
+            <li class="item-desplegable">
+              <a href="#">Acerca de la Coop <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              <ul class="sub-menu">
+                <li><a href="acerca.html">Nuestra historia</a></li>
+                <li><a href="redes.html">Nuestras redes sociales</a></li>
+              </ul>
+            </li>
+            
+            <li class="item-desplegable">
+              <a href="#">Servicios <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              <ul class="sub-menu">
+                <li><a href="encomiendas.html">Encomiendas</a></li>
+              </ul>
+            </li>
+
+            <li><a href="horarios.html">Horarios</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+
+      </div>
     </div>
   </header>
+  <!-- ================= FIN DEL ENCABEZADO ================= -->
 
-  <main class="pagina-contenido">
+  <!-- contenido de la pagina home -->
+
+
+<!-- contenido de la pagina home -->
+  <!-- Sección Hero (Fondo e imagen) -->
+  <section class="seccion-hero">
     <div class="contenedor">
-      <div class="tarjeta-blanca">
-        <h1 class="titulo-pagina">Bienvenidos a Cooperativa 16 de Agosto</h1>
-        <p>Brindamos servicio de transporte interprovincial de pasajeros y encomiendas con seguridad, puntualidad y unidades confortables.</p>
-        <br>
-        <p>Selecciona una opción del menú superior para consultar nuestros horarios, servicios o ponerte en contacto con nuestras boleterías.</p>
+      <div class="tarjeta-oscura">
+        <!-- Caja blanca con el logo -->
+        <div class="caja-logo">
+          <img src="img/logotipo 16 de agosto .png" alt="Logotipo Coop 16 de Agosto">
+        </div>
+        
+        <!-- Textos -->
+        <p class="texto-rojo">CONECTANDO ECUADOR DESDE 1983</p>
+        <h1 class="titulo-blanco">Tu viaje comienza aquí</h1>
+        
+        <!-- Botones -->
+         <div class="botones-accion">
+          
+          
+  <a href="horarios.html" class="boton-rutas">
+    <i class="fa-solid fa-map-location-dot"></i> Consultar Rutas
+  </a>
+  <a href="https://wa.me/+593939040601" class="boton-whatsapp" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+  </a>
+</div>
+</section>
+
+<!-- SECCIÓN CONSULTA DE RUTAS -->
+  <section class="seccion-consulta">
+    <div class="contenedor fila-consulta">
+      
+      <!-- Columna Izquierda: Textos -->
+      <div class="columna-texto">
+        <p class="subtitulo-viaje">PLANIFICA TU VIAJE</p>
+        <h2 class="titulo-consulta">Consulta tus rutas</h2>
+        <p class="descripcion-consulta">Selecciona tu ciudad de origen para revisar destinos, horarios referenciales y duración estimada.</p>
+        
+        <div class="caja-alerta">
+          <i class="fa-solid fa-circle-info"></i>
+          <p>Los horarios pueden cambiar por operación, feriados o turnos extraordinarios. Confirma disponibilidad antes de comprar.</p>
+        </div>
       </div>
+
+      <!-- Columna Derecha: Tarjeta Blanca Interactiva -->
+   <div class="columna-tarjeta">
+   <div class="tarjeta-blanca-rutas">
+    <label for="origen" class="label-origen">Ciudad de origen</label>
+    
+    <!-- Se añadieron los "value" cortos a cada opción -->
+    <select id="origen" class="select-origen">
+      <option value="cuenca">Oficina de Cuenca</option>
+      <option value="gualaquiza">Oficina de Gualaquiza</option>
+      <option value="gualaceo">Oficina de Gualaceo</option>
+      <option value="elpangui">Oficina de El pangui</option>
+      <option value="loja">Oficina de Loja</option>
+      <option value="limon">Oficina de Limon</option>
+      <option value="macas">Oficina de Macas</option>
+      <option value="sanjuanbosco">Oficina de San Juan Bosco</option>
+    </select>
+
+    <!-- Botón único de WhatsApp -->
+    <a href="https://wa.me/+593939040601" class="boton-reserva-wa" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Reserva tu boleto por WhatsApp
+    </a>
+
+    <!-- Contenedor con Scroll para las rutas -->
+    <div class="lista-rutas-scroll">
+      
+      <!-- Se añadió data-origen="cuenca" para que coincida con el select -->
+      <div class="item-ruta" data-origen="cuenca">
+        <p class="ruta-destino"><strong>Oficina de Cuenca</strong> ➔ Terminal de Cuenca - Terminal de Gualaquiza</p>
+        <p class="ruta-detalle">Horarios: 5:30 am (Plan de milagro), 10:00 am (Plan de milagro), 2:00 pm (Chiguinda), 4:30 pm (Plan de milagro), 7:00 pm (Plan de milagro) </p>
+        <p class="ruta-detalle">Duración estimada: 5 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="cuenca">
+        <p class="ruta-destino"><strong>Oficina de Cuenca</strong> ➔ Terminal de Cuenca - Terminal de El Panqui</p>
+        <p class="ruta-detalle">Horarios: 8:00 pm (Chiguinda) </p>
+        <p class="ruta-detalle">Duración estimada: 5 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="gualaquiza">
+        <p class="ruta-destino"><strong>Oficina de Gualaquiza</strong> ➔ Terminal de Gualaquiza - Terminal de Cuenca </p>
+        <p class="ruta-detalle">Horarios: 1:30am (Chiguinda), 2:30 am (Plan de milagro), 7:00 am (Plan de milagro), 2:00 pm (Chiguinda), 8:00 pm (Plan de milagro), 10:00 pm (Chiguinda)</p>
+        <p class="ruta-detalle">Duración estimada: 5 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="gualaquiza">
+        <p class="ruta-destino"><strong>Oficina de Gualaquiza</strong> ➔ Terminal de Gualaquiza - Terminal de Macas </p>
+        <p class="ruta-detalle">Horarios: 00:00 am, 8:30 am, 2:00 pm</p>
+        <p class="ruta-detalle">Duración estimada: 6 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="gualaceo">
+        <p class="ruta-destino"><strong>Oficina de Gualaceo</strong> ➔ Terminal de Gualaceo - Terminal de Cuenca </p>
+        <p class="ruta-detalle">Horarios: 11:00 am, 3:00 pm, 5:30 pm, 8:00 pm</p>
+        <p class="ruta-detalle">Duración estimada: 5 horas</p>
+      </div>
+
+       <div class="item-ruta" data-origen="gualaceo">
+        <p class="ruta-destino"><strong>Oficina de Gualaceo</strong> ➔ Terminal de Gualaceo - Terminal de El Panqui </p>
+        <p class="ruta-detalle">Horarios: 9:00 pm</p>
+        <p class="ruta-detalle">Duración estimada: 6 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="elpangui">
+        <p class="ruta-destino"><strong>Oficina de El pangui</strong> ➔ Terminal de El Pangui - Terminal de Cuenca </p>
+        <p class="ruta-detalle">Horarios: 1:30 am, 7:00 pm</p>
+        <p class="ruta-detalle">Duración estimada: 6 horas</p>
+      </div>
+
+
+      
+
+      <div class="item-ruta" data-origen="limon">
+        <p class="ruta-destino"><strong>Oficina de Limon</strong> ➔ Terminal de Limon - Terminal de Gualaquiza </p>
+        <p class="ruta-detalle">Horarios: 10:40 am, 5:00 pm, 8:30 pm</p>
+        <p class="ruta-detalle">Duración estimada: 3 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="limon">
+        <p class="ruta-destino"><strong>Oficina de Limon</strong> ➔ Terminal de Limon - Terminal de Macas </p>
+        <p class="ruta-detalle">Horarios: 11:15 am, 5:00 pm, 3:00 am</p>
+        <p class="ruta-detalle">Duración estimada: 3 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="loja">
+        <p class="ruta-destino"><strong>Oficina de Loja (Alianza con la Cariamanga)</strong> ➔ Terminal de Loja - Terminal de El Panqui </p>
+        <p class="ruta-detalle">Horarios: 10:30 pm</p>
+        <p class="ruta-detalle">Duración estimada: 4 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="loja">
+        <p class="ruta-destino"><strong>Oficina de Loja (Alianza con la Cariamanga)</strong> ➔ Terminal de Loja - Terminal de Gualaquiza </p>
+        <p class="ruta-detalle">Horarios: 10:30 pm</p>
+        <p class="ruta-detalle">Duración estimada: 4 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="loja">
+        <p class="ruta-destino"><strong>Oficina de Loja (Alianza con la Cariamanga)</strong> ➔ Terminal de Loja - Terminal de Cuenca </p>
+        <p class="ruta-detalle">Horarios: 20h50, 23h50</p>
+        <p class="ruta-detalle">Duración estimada: 9:30 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="macas">
+        <p class="ruta-destino"><strong>Oficina de Macas</strong> ➔ Terminal de Macas - Terminal de Gualaquiza </p>
+        <p class="ruta-detalle">Horarios: 7:30 am, 2:00 pm, 5:20 pm</p>
+        <p class="ruta-detalle">Duración estimada: 6 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="sanjuanbosco">
+        <p class="ruta-destino"><strong>Oficina de San Juan Bosco</strong> ➔ San Juan Bosco - Terminal de Gualaquiza </p>
+        <p class="ruta-detalle">Horarios: ----------</p>
+        <p class="ruta-detalle">Duración estimada: 1:30 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="sanjuanbosco">
+        <p class="ruta-destino"><strong>Oficina de San Juan Bosco</strong> ➔ San Juan Bosco - Terminal de Cuenca </p>
+        <p class="ruta-detalle">Horarios: ----------</p>
+        <p class="ruta-detalle">Duración estimada: 3:00 horas</p>
+      </div>
+
+      <div class="item-ruta" data-origen="sanjuanbosco">
+        <p class="ruta-destino"><strong>Oficina de San Juan Bosco</strong> ➔ San Juan Bosco - Terminal de Macas </p>
+        <p class="ruta-detalle">Horarios: ----------</p>
+        <p class="ruta-detalle">Duración estimada: 3:30 horas</p>
+      </div>
+
     </div>
-  </main>
+  </div>
+</div>
+
+<!-- SCRIPT OBLIGATORIO: Pega esto justo antes de cerrar tu etiqueta </body> -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const selectOrigen = document.getElementById("origen");
+    const rutas = document.querySelectorAll(".item-ruta");
+
+    function filtrarRutas() {
+      const origenSeleccionado = selectOrigen.value;
+
+      rutas.forEach(ruta => {
+        if (ruta.getAttribute("data-origen") === origenSeleccionado) {
+          ruta.style.display = "block"; // Muestra si coincide
+        } else {
+          ruta.style.display = "none";  // Oculta si no coincide
+        }
+      });
+    }
+
+    // Escucha cada vez que el usuario cambia la opción
+    selectOrigen.addEventListener("change", filtrarRutas);
+
+    // Ejecuta el filtro inmediatamente al cargar la página
+    filtrarRutas();
+  });
+</script>
+            
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+ <!-- ================= SECCIÓN SERVICIOS (VIAJA INFORMADO) ================= -->
+<section class="seccion-servicios">
+  <div class="contenedor">
+    <!-- Encabezado de la sección -->
+    <div class="cabecera-servicios">
+      <p class="subtitulo-rojo">VIAJA INFORMADO</p>
+      <h2 class="titulo-servicios">Servicios para cada etapa de tu viaje</h2>
+      <p class="descripcion-servicios">Información clara para pasajeros, encomiendas, tecnología a bordo y nuestra comunidad digital.</p>
+    </div>
+
+    <!-- Cuadrícula de tarjetas -->
+    <div class="grid-servicios">
+      
+      <!-- Tarjeta 1: Encomiendas -->
+      <div class="tarjeta-servicio">
+        <div class="icono-servicio"><i class="fa-solid fa-box-open"></i></div>
+        <h3>Servicio de encomiendas</h3>
+        <p>Envía documentos, paquetes y mercadería de forma rápida y segura mediante nuestra red a todos nuestros destinos.</p>
+        <a href="encomiendas.html" class="boton-rojo-servicio">Ver servicio</a>
+    
+      </div>
+
+      <!-- Tarjeta 2: Starlink -->
+      <div class="tarjeta-servicio">
+        <div class="icono-servicio"><i class="fa-solid fa-satellite-dish"></i></div>
+        <h3>Internet Starlink</h3>
+        <p>Navega sin interrupciones con conexión satelital de alta velocidad disponible en todas nuestras unidades durante el trayecto.</p>
+        
+        <a href="noticias.html#noticia-starlink" class="boton-rojo-servicio">Conocer más</a>
+      </div>
+
+      <!-- Tarjeta 3: Nuevas Unidades (Movida aquí) -->
+      <div class="tarjeta-servicio">
+        <div class="icono-servicio"><i class="fa-solid fa-bus"></i></div>
+        <h3>Nuevas unidades con tecnología</h3>
+        <p>Disfruta de un viaje cómodo y seguro en nuestra moderna flota equipada con la mejor tecnología y sistemas de seguridad.</p>
+         <a href="noticias.html#noticia-unidades" class="boton-rojo-servicio">Visitar redes</a>
+        
+      </div>
+
+      <!-- Tarjeta 4: Redes Sociales (Nueva) -->
+      <div class="tarjeta-servicio">
+        <div class="icono-servicio"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Conéctate con nosotros</h3>
+        <p>Síguenos en Facebook, Instagram y TikTok para enterarte de novedades y disfrutar de nuestro contenido.</p>
+       
+        <a href="redes.html" class="boton-rojo-servicio">Visitar redes</a>
+
+    
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SECCIÓN SPOTIFY ================= -->
+<section class="seccion-spotify">
+  <div class="contenedor fila-spotify">
+    
+    <!-- Columna Izquierda: Textos y Botón -->
+    <div class="columna-texto-spotify">
+      <div class="icono-spotify-logo">
+        <i class="fa-brands fa-spotify"></i>
+      </div>
+      <p class="subtitulo-spotify">PLAYLIST OFICIAL</p>
+      <h2 class="titulo-spotify">El viaje también se disfruta con música</h2>
+      <p class="descripcion-spotify">Escucha la playlist de Cooperativa 16 de Agosto mientras planificas tu próximo destino.</p>
+      
+      <!-- Botón que abre la app de Spotify con tu enlace -->
+      <a href="https://open.spotify.com/playlist/7rHKawb6hHMxAVEXjq1lJp?si=BYV1knT6TQ6KBLG0qXdbyA&utm_source=whatsapp&pi=he08XvxWTeC04" class="boton-spotify" target="_blank">
+        <i class="fa-brands fa-spotify"></i> Abrir en Spotify
+      </a>
+    </div>
+
+    <!-- Columna Derecha: Reproductor Integrado con tu Playlist -->
+    <div class="columna-reproductor">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7rHKawb6hHMxAVEXjq1lJp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+  </div>
+</section>
+
+
+
+
+  <!-- pie de pagina ) -->
 
   <footer>
     <div class="contenedor">
       <p>&copy; 2026 Cooperativa de Transportes 16 de Agosto. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+
+
+
+ 
+
+  <!-- Script para el Menú Hamburguesa y Submenús -->
+  <script>
+    // 1. Lógica del menú hamburguesa principal
+    const btnMenu = document.getElementById('btn-menu');
+    const menu = document.querySelector('.menu-derecho ul'); // Aseguramos que seleccione la lista correcta
+
+    btnMenu.addEventListener('click', () => {
+      menu.classList.toggle('mostrar-menu');
+    });
+
+    // 2. NUEVO: Lógica de los submenús (Acerca de, Servicios)
+    const enlacesDesplegables = document.querySelectorAll('.item-desplegable > a');
+
+    enlacesDesplegables.forEach(enlace => {
+      enlace.addEventListener('click', function(e) {
+        // Esto evita que al tocar el link con "#" la pantalla salte hacia arriba
+        e.preventDefault(); 
+        
+        // Busca la sub-lista que le pertenece a este botón
+        const subMenu = this.nextElementSibling;
+        
+        // La muestra o la oculta
+        subMenu.classList.toggle('mostrar-submenu');
+      });
+    });
+  </script>
+
+
 
 </body>
 </html>

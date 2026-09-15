@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias | Cooperativa 16 de Agosto</title>
+    <link rel="icon" type="image/png" href="img/favico 16 de agosto.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= ENCABEZADO ================= -->
+  <header>
+    <div class="barra-lema">
+      <div class="contenedor">
+        <p>Tu destino y tus encomiendas en las mejores manos. Coop. 16 de Agosto: rápido, seguro y confiable en cada ruta.</p>
+      </div>
+    </div>
+
+    <div class="barra-navegacion">
+      <div class="contenedor nav-contenido">
+        <div class="marca">
+          <a href="index.html" class="enlace-marca">
+            <img src="img/logotipo 16 de agosto .png" alt="Logotipo Cooperativa 16 de Agosto" class="logo-img">
+          </a>
+        </div>
+
+        <!-- ¡BOTÓN DE HAMBURGUESA AÑADIDO AQUÍ! -->
+        <button class="menu-hamburguesa" id="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="menu-derecho">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            <li class="item-desplegable">
+              <a href="#">Acerca de la Coop <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              <ul class="sub-menu">
+                <li><a href="acerca.html">Nuestra historia</a></li>
+                <li><a href="redes.html">Nuestras redes sociales</a></li>
+              </ul>
+            </li>
+            
+            <li class="item-desplegable">
+              <a href="#">Servicios <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              <ul class="sub-menu">
+                <li><a href="encomiendas.html">Encomiendas</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="horarios.html">Horarios</a></li>
+            
+            <!-- Pestaña Noticias (ACTIVA) -->
+            <li><a href="noticias.html" class="activo">Noticias</a></li>
+            
+            <li><a href="contacto.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================= CONTENIDO DE NOTICIAS ================= -->
+  <main class="pagina-noticias">
+    <div class="contenedor">
+      
+      <!-- Título de la página -->
+      <div class="cabecera-contacto">
+        <p class="subtitulo-rojo">NOVEDADES Y ACTUALIZACIONES</p>
+        <h1 class="titulo-historia">Noticias 16 de Agosto</h1>
+        <p class="parrafo-historia centrado">Mantente informado sobre nuestras nuevas rutas, mejoras en la flota y avisos importantes para tus viajes.</p>
+      </div>
+
+      <!-- NOTICIA 1: Principal Destacada (Nuevas Unidades) -->
+      <article class="noticia-destacada" id="noticia-unidades">
+        <div class="img-destacada-contenedor">
+          <img src="img/3 buses noticias 16 de agosto.jpg" alt="Nuevas unidades de la cooperativa" class="img-destacada">
+        </div>
+        <div class="contenido-destacado">
+          <span class="etiqueta-fecha">16 de Septiembre, 2026</span>
+          <h2><a href="#">Renovamos nuestra flota con más de 5 unidades del año</a></h2>
+          <p>Pensando en tu descanso y seguridad, incorporamos modernos buses de última generación. Disfruta del mayor confort, amplitud y tecnología en cada uno de tus viajes con nosotros.</p>
+          <a href="#" class="enlace-leer-mas">Leer artículo completo <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Cuadrícula de Noticias -->
+      <div class="grid-noticias">
+
+        <!-- NOTICIA 2: Internet Starlink -->
+        <article class="tarjeta-noticia" id="noticia-starlink">
+          <div class="img-noticia-contenedor">
+            <img src="img/starlink 16 de agosto buses.jpg" alt="Internet Starlink a bordo">
+          </div>
+          <div class="info-noticia">
+            <span class="etiqueta-fecha">16 de Septiembre, 2026</span>
+            <h3><a href="#">Conexión sin límites: Internet Starlink en todas nuestras unidades</a></h3>
+            <p>¡Ya contamos con internet satelital! Hemos instalado la avanzada tecnología de Starlink en toda nuestra flota para que disfrutes de una conexión rápida y estable en cualquier ruta que elijas.</p>
+            <a href="#" class="enlace-leer-mas">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- NOTICIA 3: Nueva Página Web -->
+        <article class="tarjeta-noticia">
+          <div class="img-noticia-contenedor">
+            <img src="img/Pagina web 16 de agosto.jpg" alt="Lanzamiento nueva página web">
+          </div>
+          <div class="info-noticia">
+            <span class="etiqueta-fecha">16 de Septiembre, 2026</span>
+            <h3><a href="#">Lanzamiento oficial de nuestra nueva plataforma digital interactiva</a></h3>
+            <p>Estrenamos sitio web. Ahora es mucho más ágil y fácil consultar nuestros horarios, revisar los detalles de rutas, servicios a bordo y contactarnos directamente para reservar tus boletos.</p>
+            <a href="#" class="enlace-leer-mas">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Paginación de Noticias -->
+      <div class="paginacion-noticias">
+        <a href="#" class="btn-pagina pagina-activa">1</a>
+        <a href="#" class="btn-pagina">2</a>
+        <a href="#" class="btn-pagina">3</a>
+        <span class="puntos-suspensivos">...</span>
+        <a href="#" class="btn-pagina">9</a>
+        <a href="#" class="btn-pagina btn-siguiente">
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= PIE DE PÁGINA ================= -->
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 Cooperativa de Transportes 16 de Agosto. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPT PARA EL MENÚ ================= -->
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menu = document.querySelector('.menu-derecho ul'); 
+
+    btnMenu.addEventListener('click', () => {
+      menu.classList.toggle('mostrar-menu');
+    });
+
+    const enlacesDesplegables = document.querySelectorAll('.item-desplegable > a');
+
+    enlacesDesplegables.forEach(enlace => {
+      enlace.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        const subMenu = this.nextElementSibling;
+        subMenu.classList.toggle('mostrar-submenu');
+      });
+    });
+  </script>
+</body>
+</html>

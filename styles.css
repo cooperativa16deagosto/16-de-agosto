@@ -17,32 +17,66 @@ body {
   margin: 0 auto;
 }
 
-/* Barra de navegación */
+/* =========================================
+   BLOQUE 1: Franja Anaranjada con el Lema
+   ========================================= */
+.barra-lema {
+  background-color: #e65100; /* Color anaranjado */
+  color: #ffffff;
+  text-align: center;
+  padding: 0.55rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* =========================================
+   BLOQUE 2: Barra de Navegación Blanca
+   ========================================= */
 .barra-navegacion {
   background-color: #ffffff;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-contenido {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Agrupa los elementos a la izquierda */
+  gap: 160px; /* Ajusta este número si quieres el menú más cerca o más lejos */
   align-items: center;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
 }
 
-.logo a {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #1a365d;
+
+/* Logotipo + Nombre de la empresa a la izquierda */
+.marca .enlace-marca {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   text-decoration: none;
+}
+
+.logo-img {
+  height: 70px; /* Aumentamos de 48px a 70px */
+  width: auto;
+  object-fit: contain;
+}
+
+.nombre-coop {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #0d3b66; /* Azul marino oscuro */
   letter-spacing: 0.5px;
 }
 
+/* Menú de enlaces a la derecha */
 .menu-derecho ul {
   display: flex;
   list-style: none;
-  gap: 1.8rem;
+  gap: 3rem;
   align-items: center;
 }
 
@@ -51,23 +85,35 @@ body {
   color: #4a5568;
   font-size: 0.95rem;
   font-weight: 500;
-  padding: 0.4rem 0.2rem;
-  border-bottom: 2px solid transparent;
+  padding: 0.5rem 0.2rem;
   transition: all 0.2s ease;
+  position: relative;
 }
 
-.menu-derecho a:hover {
-  color: #c53030;
-}
-
-/* Marca la pestaña en la que el usuario está ubicado */
+/* Efecto hover y enlace activo en Rojo con subrayado */
+.menu-derecho a:hover,
 .menu-derecho a.activo {
-  color: #c53030;
-  border-bottom: 2px solid #c53030;
+  color: #c53030; /* Rojo */
   font-weight: 700;
 }
 
-/* Área de contenido de cada página */
+.menu-derecho a.activo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #c53030; /* Subrayado rojo */
+  border-radius: 2px;
+}
+
+
+
+
+/* =========================================
+   Contenido y Secciones
+   ========================================= */
 .pagina-contenido {
   padding: 3.5rem 0;
   min-height: 75vh;
@@ -87,7 +133,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Estilo para tablas de horarios */
+/* Tabla para la página de horarios */
 .tabla-horarios {
   width: 100%;
   border-collapse: collapse;
@@ -112,4 +158,1815 @@ footer {
   text-align: center;
   padding: 1.5rem 0;
   font-size: 0.9rem;
+}
+
+
+
+
+
+
+/* Ocultar el botón en computadoras */
+.menu-hamburguesa {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #0b224e;
+  cursor: pointer;
+}
+
+
+
+/* =========================================
+   SECCIÓN HERO (Fondo y Tarjeta Principal)
+   ========================================= */
+   
+.seccion-hero {
+  /* Imagen de fondo */
+  background-image: url('img/full buses fondo.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* 1. Solución para que ruede hacia abajo con el resto de la página */
+  background-attachment: scroll; 
+
+  /* 2. Efecto de "cuadro" al límite de la pantalla */
+  margin: 10px; /* Crea el margen sutil alrededor de toda la imagen */
+  border-radius: 16px; /* Redondea las esquinas del cuadro de fondo */
+  overflow: hidden; /* Asegura que la imagen no se salga de las curvas */
+  
+  /* 3. Escala y alineación interna */
+  min-height: 80vh; 
+  display: flex;
+  align-items: center;
+}
+  
+
+.tarjeta-oscura {
+  background-color: rgba(13, 59, 102, 0.95); /* Azul oscuro de la marca casi sólido */
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  max-width: 450px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.caja-logo {
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.caja-logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+.texto-rojo {
+  color: #f56565; /* Letra roja */
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-blanco {
+  color: #ffffff;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+}
+
+.botones-accion {
+  display: flex;
+  flex-direction: column; /* Coloca un botón debajo del otro */
+  gap: 1rem;
+}
+
+.boton-rutas {
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.9rem;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.boton-rutas:hover {
+  background-color: #ffffff;
+  color: #0d3b66;
+}
+
+.boton-whatsapp {
+  background-color: #25D366; /* Verde oficial de WhatsApp */
+  color: #ffffff;
+  text-align: center;
+  padding: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.boton-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+/* =========================================
+   SECCIÓN CONSULTA DE RUTAS
+   ========================================= */
+.seccion-consulta {
+  background-color: #0d3b66; /* Azul oscuro corporativo */
+  padding: 5rem 0;
+  color: #ffffff;
+}
+
+.fila-consulta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.columna-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.subtitulo-viaje {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-consulta {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.descripcion-consulta {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #e2e8f0;
+}
+
+.caja-alerta {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  gap: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+}
+
+.caja-alerta i {
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+/* --- Tarjeta Blanca Derecha --- */
+.columna-tarjeta {
+  flex: 1;
+  min-width: 320px;
+  max-width: 650px;
+}
+
+.tarjeta-blanca-rutas {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  color: #2d3748;
+}
+
+.label-origen {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a202c;
+}
+
+.select-origen {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Botón Exclusivo de WhatsApp */
+.boton-reserva-wa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #25D366;
+  color: #ffffff;
+  padding: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.boton-reserva-wa:hover {
+  background-color: #1ebe57;
+}
+
+/* Contenedor con Scroll para la lista */
+.lista-rutas-scroll {
+  max-height: 300px; /* Altura máxima antes de que aparezca el scroll */
+  overflow-y: auto;  /* Activa el scroll vertical */
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Personalización del diseño del Scrollbar */
+.lista-rutas-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.lista-rutas-scroll::-webkit-scrollbar-track {
+  background: #f7fafc; 
+  border-radius: 10px;
+}
+.lista-rutas-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e0; 
+  border-radius: 10px;
+}
+
+.item-ruta {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.2rem;
+  background-color: #f7fafc;
+}
+
+.ruta-destino {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.ruta-detalle {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 0.2rem;
+}
+
+.columna-servicios {
+  flex: 0 0 240px; /* Tamaño fijo reducido */
+  min-width: 200px; /* Anula el límite ancho anterior */
+  max-width: 240px; /* Obliga a mantener el tamaño pequeño */
+  background-color: #e2e8f0; 
+  padding: 2rem 1.5rem; /* Menos espacio en blanco adentro */
+  border-radius: 12px;
+  border-left: 5px solid #e53e3e; 
+  align-self: flex-start; /* Evita que el cuadro se estire hacia abajo */
+}
+
+
+.columna-futuro {
+  flex: 1; 
+  min-width: 320px;
+}
+
+
+
+/* =========================================
+   SECCIÓN SERVICIOS (VIAJA INFORMADO)
+   ========================================= */
+.seccion-servicios {
+  background-color: #f7fafc; /* Fondo gris/azulado muy claro como en la imagen */
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.cabecera-servicios {
+  margin-bottom: 3.5rem;
+}
+
+.subtitulo-rojo {
+  color: #e53e3e; /* Rojo vibrante */
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.titulo-servicios {
+  color: #0b224e; /* Azul oscuro corporativo */
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.descripcion-servicios {
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+/* Sistema de cuadrícula para las 4 tarjetas */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: left; /* Alinea el texto de cada tarjeta a la izquierda */
+}
+
+/* Diseño individual de cada cuadro blanco */
+.tarjeta-servicio {
+  background-color: #ffffff;
+  border-radius: 16px; /* Bordes bien redondeados */
+  padding: 2.5rem 2rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 10px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-5px); /* Efecto sutil de salto al pasar el mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Cuadrito de color para los iconos */
+.icono-servicio {
+  background-color: #ebf8ff; /* Fondo celeste claro */
+  color: #0d3b66; /* Color del icono */
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta-servicio h3 {
+  color: #0b224e;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.tarjeta-servicio p {
+  color: #718096;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1; /* Empuja el enlace siempre hacia abajo */
+}
+
+/* =========================================
+   BOTONES ROJOS (Texto grueso con flecha inyectada)
+   ========================================= */
+.boton-rojo-servicio {
+  background-color: transparent; 
+  color: #e53e3e; 
+  font-weight: 900; 
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+/* Inyecta la flecha al final del texto */
+.boton-rojo-servicio::after {
+  content: " \2192"; 
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 0.3s ease; /* Anima solo el movimiento de la flecha */
+}
+
+/* Cambia el color del texto al interactuar */
+.boton-rojo-servicio:hover {
+  color: #c53030; 
+  background-color: transparent;
+}
+
+/* Desliza la flecha hacia la derecha al interactuar */
+.boton-rojo-servicio:hover::after {
+  transform: translateX(8px); 
+}
+
+/* =========================================
+   SECCIÓN SPOTIFY
+   ========================================= */
+.seccion-spotify {
+  /* Fondo degradado: de un verde muy oscuro (estilo Spotify) hacia tu azul corporativo */
+  background: linear-gradient(135deg, #0b221a 0%, #0d3b66 100%); 
+  padding: 6rem 0;
+  color: #ffffff;
+}
+
+.fila-spotify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centra el texto y el reproductor verticalmente */
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.columna-texto-spotify {
+  flex: 1;
+  min-width: 300px;
+}
+
+.icono-spotify-logo i {
+  color: #1DB954; /* Verde oficial de Spotify */
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subtitulo-spotify {
+  color: #1DB954;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.titulo-spotify {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.descripcion-spotify {
+  font-size: 1.1rem;
+  color: #cbd5e0;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* Botón estilo píldora de Spotify */
+.boton-spotify {
+  background-color: #1DB954;
+  color: #000000;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 50px; 
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.boton-spotify:hover {
+  background-color: #1ed760; /* Verde más brillante al pasar el mouse */
+  transform: scale(1.05); /* Efecto de crecimiento característico de Spotify */
+}
+
+.columna-reproductor {
+  flex: 1;
+  min-width: 320px;
+  max-width: 550px; /* Controla el ancho máximo del reproductor */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4); /* Sombra para darle profundidad */
+  border-radius: 12px;
+}
+
+
+
+
+
+
+/* =========================================
+   PÁGINA: ACERCA DE LA COOP (HISTORIA)
+   ========================================= */
+.seccion-historia {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.layout-historia {
+  display: flex;
+  gap: 5rem; /* Espacio grande entre las fotos y el texto */
+  align-items: flex-start; /* Crucial para que funcione el efecto pegajoso */
+  flex-wrap: wrap; 
+}
+
+
+
+
+
+/* Columna Izquierda (Fotos) */
+.columna-imagenes {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Espacio entre una foto y la de abajo */
+}
+
+
+.img-historia {
+  width: 80%; /* Reduce el ancho (puedes bajarlo a 70% o 60% si lo quieres más pequeño) */
+  max-height: 350px; /* Pone un límite de altura para que no se vea tan gigante hacia abajo */
+  object-fit: cover; /* Recorta los bordes sobrantes para que no se deforme ni se aplaste */
+  display: block; 
+  margin: 0 auto; /* Centra la imagen dentro de su columna */
+  
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+  transition: transform 0.3s ease;
+}
+
+.img-historia:hover {
+  transform: scale(1.02); 
+}
+
+
+/* Columna Derecha (Texto) */
+.columna-texto {
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Efecto Sticky: El texto se pega a 100px del techo al hacer scroll */
+.texto-pegajoso {
+  position: sticky;
+  top: 100px; 
+}
+
+.etiqueta-historia {
+  color: #e53e3e; /* Rojo vibrante */
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.titulo-historia {
+  color: #0b224e; /* Azul corporativo */
+  font-size: 3rem;
+  line-height: 1.15;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.parrafo-historia {
+  color: #4a5568;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: justify; /* Hace que el bloque de texto se vea muy ordenado */
+}
+
+.parrafo-historia strong {
+  color: #0b224e;
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   MENÚ DESPLEGABLE (DROPDOWN)
+   ========================================= */
+.item-desplegable {
+  position: relative;
+}
+
+/* Diseño del cuadro blanco del submenú */
+.sub-menu {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #ffffff;
+  min-width: 240px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+  border-radius: 4px;
+  border-top: 3px solid #e53e3e; 
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1000; 
+  
+  padding: 0.5rem 0;
+  list-style: none;
+  
+  /* Estas líneas juntan los elementos */
+  display: flex;
+  flex-direction: column;
+  gap: 0 !important; 
+}
+
+/* Mostrar el submenú al pasar el mouse */
+.item-desplegable:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Quitar márgenes extra de los elementos de la lista */
+.sub-menu li {
+  display: block; 
+  margin: 0 !important; 
+  padding: 0 !important; 
+}
+
+/* Diseño del texto dentro del submenú */
+.sub-menu li a {
+  color: #0b224e !important; 
+  padding: 12px 20px !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: block;
+  transition: background-color 0.2s;
+  border: none !important; 
+}
+
+.sub-menu li a:hover {
+  background-color: #f7fafc; 
+  color: #e53e3e !important; 
+}
+
+
+/* Diseño del cuadro blanco del submenú */
+.sub-menu {
+  position: absolute;
+  top: 100%; /* Se coloca justo debajo del texto principal */
+  left: 0;
+  background-color: #ffffff;
+  min-width: 240px; /* Ancho del cuadro blanco */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+  border-radius: 4px;
+  border-top: 3px solid #e53e3e; /* Línea roja superior para combinar con tu diseño */
+  
+  /* Oculto por defecto con transición suave */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1000; /* Asegura que flote sobre el resto de la página */
+  
+  padding: 0.5rem 0;
+  list-style: none;
+
+  /* 👇 AGREGA ESTAS DOS LÍNEAS AQUÍ 👇 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   PÁGINA: REDES SOCIALES (Diseño de 3 cuadrados)
+   ========================================= */
+.seccion-redes {
+  padding: 6rem 0;
+  background-color: #f7fafc;
+}
+
+.cabecera-redes {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+}
+
+.centrado {
+  text-align: center;
+}
+
+/* Fuerza las 3 columnas exactas */
+.grid-redes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* Diseño del cuadrado (tarjeta) */
+.tarjeta-red {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-top: 4px solid #0d3b66; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-red:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Círculos de color para los iconos */
+.icono-red {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.facebook { background-color: #1877F2; }
+.tiktok { background-color: #000000; }
+.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+.tarjeta-red h3 {
+  color: #0b224e;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tarjeta-red p {
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+
+
+
+/* =========================================
+   PÁGINA: ENCOMIENDAS
+   ========================================= */
+.pagina-encomiendas {
+  background-color: #ffffff;
+  padding-bottom: 6rem;
+}
+
+/* --- Sección Superior (Layout 50/50) --- */
+.intro-encomiendas {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  padding: 5rem 0;
+  flex-wrap: wrap;
+}
+
+.columna-img-encomienda, .columna-texto-encomienda {
+  flex: 1;
+  min-width: 320px;
+}
+
+.img-encomienda-principal {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* --- Sección Inferior (Tarjetas Blancas) --- */
+.tipos-envio {
+  padding-top: 3rem;
+}
+
+.cabecera-tipos {
+  margin-bottom: 3rem;
+}
+
+/* Título más delgado y azul claro basado en tu imagen */
+.titulo-seccion-ligero {
+  color: #12406b;
+  font-size: 2.8rem;
+  font-weight: 400; 
+  margin-top: 0.5rem;
+}
+
+.grid-tipos-envio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Diseño exacto de la tarjeta de encomienda */
+.tarjeta-tipo {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* Borde gris muy sutil */
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-tipo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icono-tipo {
+  background-color: #f1f5f9; /* Fondo gris/celeste muy pálido */
+  color: #12406b;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta-tipo h3 {
+  color: #12406b;
+  font-size: 1.3rem;
+  font-weight: 400; /* Letra no tan gruesa */
+  margin-bottom: 0.8rem;
+}
+
+.tarjeta-tipo p {
+  color: #64748b; /* Texto gris de la descripción */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+
+
+/* =========================================
+   PÁGINA: HORARIOS (Diseño Completo)
+   ========================================= */
+.pagina-horarios {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.cabecera-horarios {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+/* Imagen Principal (Arriba) */
+.imagen-destacada-horarios {
+  margin-bottom: 4rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.img-fluida {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 550px;
+  object-fit: cover;
+}
+
+/* Sección de Servicios y Espacio Futuro */
+.layout-servicios-bordo {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+}
+
+.columna-servicios {
+  flex: 1;
+  min-width: 320px;
+  background-color: #e2e8f0; /* Gris azulado muy claro */
+  padding: 3rem;
+  border-radius: 12px;
+  border-left: 5px solid #e53e3e; /* Línea roja de marca */
+}
+
+/* Espacio en blanco (invisible pero ocupa espacio) para el futuro */
+.columna-futuro {
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Textos e íconos de los servicios */
+.titulo-servicios-bordo {
+  color: #0b224e;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.linea-separadora {
+  border: none;
+  border-top: 2px solid #a0aec0; /* Línea delgada como en tu imagen */
+  width: 60px;
+  margin-left: 0;
+  margin-bottom: 2rem;
+}
+
+.lista-servicios-bordo {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-servicios-bordo li {
+  font-size: 1.15rem;
+  color: #1e293b;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.lista-servicios-bordo li i {
+  color: #0b224e; /* Íconos en azul oscuro */
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+}
+
+/* Cuadrícula de 4 fotos (2 columnas, 2 filas) */
+.grid-imagenes-horarios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.img-horario {
+  width: 70%; /* Modifica este porcentaje (ej. 70%, 90%) para escalar la imagen */
+  max-width: 450px; /* Evita que se hagan gigantes en pantallas grandes */
+  margin: 0 auto; /* Mantiene las imágenes bien centradas */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  display: block; /* Necesario para que el centrado funcione perfecto */
+}
+
+.img-horario:hover {
+  transform: scale(1.02);
+}
+
+/* Se adapta a celulares mostrando 1 sola columna */
+@media (max-width: 768px) {
+  .grid-imagenes-horarios {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   PÁGINA: CONTÁCTANOS (Tarjetas de Oficinas)
+   ========================================= */
+.pagina-contacto {
+  padding: 6rem 0;
+  background-color: #f7fafc;
+}
+
+.cabecera-contacto {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+}
+
+.grid-oficinas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+/* Diseño del cuadrado general */
+.tarjeta-oficina {
+  background-color: #faf5e4e3;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-top: 4px solid #0d3b66; 
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-oficina:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.titulo-oficina {
+  color: #0b224e;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.linea-oficina {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+/* Layout para oficinas con 2 columnas (Teléfono y Celular) */
+.layout-dual {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.columna-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Layout para oficinas con 1 sola columna (Solo Celular) */
+.columna-unica {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos de los textos internos */
+.etiqueta-info {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.dato-info {
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Botón de WhatsApp */
+.boton-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25D366; /* Color oficial de WhatsApp */
+  color: #ffffff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+  align-self: flex-start; /* Evita que el botón se estire */
+}
+
+.boton-whatsapp:hover {
+  background-color: #1ebe57;
+  color: #ffffff;
+}
+
+.boton-whatsapp i {
+  font-size: 1.2rem;
+}
+
+
+
+/* =========================================
+   SECCIÓN MAPA INTERACTIVO (Enmarcado)
+   ========================================= */
+.seccion-mapa {
+  margin-top: 2rem;
+  margin-bottom: 5rem; /* Asegura separación con el pie de página oscuro */
+  text-align: center; 
+}
+
+.titulo-mapa {
+  color: #0b224e;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Diseño del cuadro exterior que contiene el mapa */
+.tarjeta-mapa {
+  background-color: #ffffff;
+  padding: 1.5rem; /* Crea el marco blanco alrededor del mapa */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  max-width: 900px; /* Evita que el mapa se estire infinitamente */
+  margin: 0 auto; /* Mantiene el cuadro perfectamente centrado */
+  border-top: 4px solid #0d3b66; 
+}
+
+/* El espacio interno del mapa */
+.contenedor-iframe {
+  width: 100%;
+  height: 400px; /* Altura controlada */
+  border-radius: 8px; /* Redondea solo las esquinas del mapa */
+  overflow: hidden; 
+}
+
+.contenedor-iframe iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+
+
+
+/* =========================================
+   TEXTOS Y ALERTAS (Columna Derecha)
+   ========================================= */
+.encabezado-rutas-dinamico h2 {
+  color: #0b224e;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.encabezado-rutas-dinamico p {
+  color: #4a5568;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.alerta-horarios {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.alerta-horarios i {
+  color: #0b224e;
+  font-size: 1.5rem;
+}
+
+.alerta-horarios p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+/* =========================================
+   TARJETA CELESTE INTERACTIVA
+   ========================================= */
+.tarjeta-celeste-rutas {
+  background-color: #e0f2fe; /* Celeste elegante (Sky Blue claro) */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.label-origen {
+  display: block;
+  font-weight: 700;
+  color: #0b224e;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.select-origen {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.boton-reserva-wa {
+  display: block;
+  width: 100%;
+  background-color: #25D366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.boton-reserva-wa:hover {
+  background-color: #1ebe57;
+  color: white;
+}
+
+/* Área de scroll para las rutas */
+.lista-rutas-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Personalización de la barra de scroll */
+.lista-rutas-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.lista-rutas-scroll::-webkit-scrollbar-track {
+  background: #bae6fd; 
+  border-radius: 4px;
+}
+.lista-rutas-scroll::-webkit-scrollbar-thumb {
+  background: #0284c7; 
+  border-radius: 4px;
+}
+
+.item-ruta {
+  background-color: #ffffff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  border-left: 4px solid #e53e3e; /* Línea roja izquierda */
+}
+
+.ruta-destino {
+  color: #0b224e;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.ruta-detalle {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+
+
+
+
+
+/* =========================================================
+   PÁGINA: NOTICIAS (DISEÑO COMPLETO E INTERACTIVO)
+   ========================================================= */
+
+/* --- 1. FONDO GENERAL Y TEXTOS COMPARTIDOS --- */
+.pagina-noticias {
+  padding: 6rem 0;
+  background-color: #f7fafc;
+}
+
+/* El cuadrito gris con la fecha (16 de Septiembre, 2026) */
+.etiqueta-fecha {
+  display: inline-block;
+  background-color: #e2e8f0;
+  color: #4a5568;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* El enlace rojo con la flecha de "Leer más" */
+.enlace-leer-mas {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e53e3e;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.enlace-leer-mas:hover {
+  color: #c53030;
+}
+
+
+/* --- 2. NOTICIA PRINCIPAL DESTACADA (La grande de arriba) --- */
+.noticia-destacada {
+  display: flex;
+  background-color: #fdfbf5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin-bottom: 4rem; /* Separación con los 3 cuadros de abajo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticia-destacada:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Contenedor de la imagen del logo circular */
+.img-destacada-contenedor {
+  flex: 1;
+  min-width: 300px;
+  overflow: hidden; 
+  background-color: #e0f2fe; /* Fondo celeste por si tu imagen es transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-destacada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Efecto zoom al pasar el mouse por la noticia principal */
+.noticia-destacada:hover .img-destacada {
+  transform: scale(1.05); 
+}
+
+/* Textos de la noticia principal */
+.contenido-destacado {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenido-destacado h2 a {
+  color: #0b224e;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.contenido-destacado h2 a:hover {
+  color: #e53e3e;
+}
+
+
+/* --- 3. LOS 3 CUADROS DE NOTICIAS (Buses, Starlink, Web) --- */
+.grid-noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Diseño individual de cada uno de los 3 cuadros */
+.tarjeta-noticia {
+  background-color: #fdfbf5; /* Color cremita que pediste */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border-top: 5px solid #e53e3e; /* Etiqueta roja en la parte superior */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-top-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre los cuadros (Levanta y cambia la línea a azul) */
+.tarjeta-noticia:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  border-top-color: #0d3b66; /* La línea roja cambia a azul corporativo */
+}
+
+/* El recuadro donde van las imágenes pequeñas */
+.img-noticia-contenedor {
+  height: 220px;
+  overflow: hidden;
+}
+
+.img-noticia-contenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom en las imágenes pequeñas al pasar el mouse */
+.tarjeta-noticia:hover .img-noticia-contenedor img {
+  transform: scale(1.08); 
+}
+
+/* Textos dentro de los cuadros */
+.info-noticia {
+  padding: 2rem;
+}
+
+.info-noticia h3 a {
+  color: #0b224e;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.info-noticia h3 a:hover {
+  color: #e53e3e;
+}
+
+
+/* --- 4. LOS BOTONES DE NÚMEROS (Paginación) --- */
+.paginacion-noticias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 4rem; /* Separación con los cuadros de arriba */
+}
+
+/* Forma cuadrada de los números */
+.btn-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Efecto al pasar el mouse por los números normales (1, 2, 3...) */
+.btn-pagina:hover:not(.pagina-activa) {
+  background-color: #e2e8f0;
+}
+
+/* Número de la página actual (El cuadro Gris oscuro) */
+.pagina-activa {
+  background-color: #474b4e; 
+  color: #ffffff;
+  pointer-events: none; /* Desactiva el clic */
+}
+
+.puntos-suspensivos {
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0 0.5rem;
+}
+
+/* Botón Verde con la Flecha de Siguiente */
+.btn-siguiente {
+  background-color: #a3e635;
+  color: #1e293b;
+}
+
+.btn-siguiente:hover {
+  background-color: #84cc16;
+}
+
+
+/* --- 5. ADAPTACIÓN PARA CELULARES --- */
+@media (max-width: 768px) {
+  .noticia-destacada {
+    flex-direction: column; /* Pone la imagen arriba y el texto abajo en móviles */
+  }
+  .img-destacada-contenedor {
+    height: 300px;
+  }
+}
+
+
+
+/* =========================================
+   EFECTO DE SALTO SUAVE Y MARGEN PARA ENLACES
+   ========================================= */
+html {
+  scroll-behavior: smooth; /* Hace que el deslizamiento sea animado y suave */
+}
+
+/* Evita que el menú superior tape las noticias al saltar */
+#noticia-starlink {
+  scroll-margin-top: 20px; /* Si ves que el menú aún lo tapa, sube este número a 150px */
+}
+/* Evita que el menú superior tape las noticias al saltar */
+#noticia-unidades{
+  scroll-margin-top: 130px; /* Si ves que el menú aún lo tapa, sube este número a 150px */
+}
+
+
+
+/* =========================================
+   ADAPTACIÓN PARA CELULARES (MÓVILES)
+   ========================================= */
+
+/* Esta regla aplica solo en pantallas menores a 768px (Tablets y celulares) */
+@media (max-width: 768px) {
+  
+  /* 1. Ajuste de la franja naranja superior */
+  .franja-naranja { /* Cambia esto por la clase real de tu franja naranja */
+    font-size: 0.8rem;
+    padding: 10px 5px;
+    text-align: center;
+  }
+
+  /* 2. Hacer que el logo y el menú se apilen hacia abajo */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 15px; /* Espacio entre el logo y el menú */
+  }
+
+  /* 3. Centrar los enlaces del menú para que no se salgan de la pantalla */
+  nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones bajen de línea si no caben */
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 5px;
+  }
+}
+/* =========================================================
+   DISEÑO RESPONSIVO TOTAL (ADAPTACIÓN PARA CELULARES)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  
+  /* --- 1. Ajustes Generales --- */
+  .contenedor {
+    padding: 0 15px; /* Reducimos los márgenes laterales para aprovechar la pantalla */
+    width: 100%;
+  }
+  
+  header {
+    padding: 0 !important; /* Quita rellenos extra del contenedor principal */
+  }
+
+  /* (Unimos los dos .barra-navegacion aquí) */
+  .barra-navegacion {
+    height: auto !important; 
+    min-height: 0 !important; 
+    max-height: fit-content !important; /* <--- EL TIRO DE GRACIA */
+    padding-bottom: 10px !important; 
+  }
+
+  .menu-derecho {
+    margin: 0 !important; 
+  }
+
+  .seccion-hero .contenedor {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .tarjeta-oscura {
+    margin-top: 0 !important; 
+  }
+
+  /* --- 2. Encabezado y Navegación (Con Menú Hamburguesa) --- */
+  
+  /* Pone el logo y el botón en la misma línea */
+  .nav-contenido {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0 !important;
+    height: auto !important;     
+    min-height: 0 !important;    
+    max-height: fit-content !important; /* <--- EL TIRO DE GRACIA */
+  }
+
+  /* Ajusta el espacio del logo */
+  .marca {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hace el logo de un tamaño perfecto para celular */
+  .logo-img {
+    max-width: 160px; 
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  /* Quita cualquier margen raro del botón para que no se baje */
+  .menu-hamburguesa {
+    display: block;
+    margin: 0;
+  }
+
+  /* Asegura que cuando abras el menú, ocupe todo el ancho abajo */
+  .menu-derecho {
+    width: 100%;
+  }
+
+  nav ul {
+    display: none !important; 
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 15px;
+  }
+
+  nav ul.mostrar-menu {
+    display: flex !important; 
+  }
+
+
+
+ 
+
+  /* --- 3. Sección de Noticias --- */
+  .noticia-destacada {
+    flex-direction: column; /* Pone la imagen arriba y el texto abajo */
+  }
+
+  .img-destacada-contenedor {
+    min-width: 100%;
+    height: 250px; /* Hace la imagen más pequeña en celulares */
+  }
+
+  .contenido-destacado {
+    padding: 1.5rem; /* Reduce el espacio en blanco interior */
+  }
+
+  .contenido-destacado h2 a {
+    font-size: 1.5rem; /* Achica un poco el título principal */
+  }
+
+  .grid-noticias {
+    grid-template-columns: 1fr; /* Fuerza a las tarjetas a ponerse en una sola columna */
+    gap: 1.5rem;
+  }
+
+  /* --- 4. Sección de Servicios (Los 4 cuadros) --- */
+  .grid-servicios {
+    grid-template-columns: 1fr; /* Apila los cuadros de servicios uno por uno */
+    gap: 1.5rem;
+  }
+
+  /* --- 5. Sección de Spotify --- */
+  .fila-spotify {
+    display: flex;
+    flex-direction: column; /* Apila los textos y el reproductor */
+    text-align: center; /* Centra los textos de Spotify */
+    gap: 2rem;
+  }
+
+  .boton-spotify {
+    margin: 0 auto; /* Centra el botón verde de Spotify */
+  }
+}
+
+
+/* --- 6. Submenús desplegables en celular --- */
+  .sub-menu {
+    display: none !important; /* Oculto por defecto en celular */
+    flex-direction: column;
+    background-color: #f1f5f9; /* Un fondo un poquito más gris para diferenciarlo */
+    width: 100%;
+    padding: 0;
+  }
+
+  .sub-menu li a {
+    padding: 10px 0;
+    font-size: 0.95rem; /* Letra un poquito más pequeña */
+    color: #475569; 
+  }
+
+  /* Esta es la clase mágica que el JavaScript activará al tocar */
+  .mostrar-submenu {
+    display: flex !important;
+  }
+
+
+ /* =========================================================
+   AJUSTES PÁGINA "ACERCA DE" (ESTRICTAMENTE SOLO CELULARES)
+   ========================================================= */
+@media (max-width: 768px) {
+  
+  .layout-historia {
+    display: flex !important;
+    flex-direction: column-reverse !important; /* Texto arriba, fotos abajo */
+    gap: 20px;
+  }
+
+  .titulo-historia {
+    font-size: 2rem !important;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .parrafo-historia {
+    font-size: 0.95rem !important;
+  }
+
+  .columna-imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .img-historia {
+    width: 85% !important; 
+    height: auto;
+    margin-bottom: 15px !important;
+    border-radius: 8px;
+  }
+
+
+  /* =========================================================
+     AJUSTES PÁGINA "REDES" (SOLO CELULARES)
+     ========================================================= */
+  .grid-redes {
+    display: flex !important;
+    flex-direction: column !important; /* Apila las tarjetas una sobre otra */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .tarjeta-red {
+    width: 90% !important; /* Para que ocupen casi toda la pantalla sin tocar los bordes */
+  }
+
+
+  /* =========================================================
+     AJUSTES PÁGINA "ENCOMIENDAS" (SOLO CELULARES)
+     ========================================================= */
+  .intro-encomiendas {
+    display: flex !important;
+    flex-direction: column-reverse !important; /* Invierte el orden: Texto arriba, foto abajo */
+    gap: 20px;
+  }
+
+  /* Centra y ajusta el tamaño de la imagen promocional */
+  .columna-img-encomienda {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .img-encomienda-principal {
+    width: 95% !important; /* Evita que la foto choque con los bordes de la pantalla */
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* =========================================================
+     AJUSTES PÁGINA "HORARIOS" (SOLO CELULARES)
+     ========================================================= */
+  .layout-servicios-bordo {
+    display: flex !important;
+    flex-direction: column !important; /* Pone las dos columnas una debajo de la otra */
+    gap: 20px;
+  }
+
+  .columna-servicios {
+    width: 85% !important; /* Achica el ancho de la caja gris */
+    margin: 0 auto !important; /* La centra en la pantalla */
+    padding: 20px !important; /* Le quita relleno interno para hacerla más pequeña */
+  }
+
+  .titulo-servicios-bordo {
+    font-size: 1.2rem !important; /* Achica el título azul */
+    margin-bottom: 10px !important;
+  }
+
+  .lista-servicios-bordo li {
+    font-size: 0.95rem !important; /* Achica el texto de los servicios */
+    margin-bottom: 10px !important;
+  }
+
+
+
+
 }

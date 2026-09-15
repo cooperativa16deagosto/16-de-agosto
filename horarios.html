@@ -4,67 +4,241 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horarios | Cooperativa 16 de Agosto</title>
+    <link rel="icon" type="image/png" href="img/favico 16 de agosto.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="barra-navegacion">
-    <div class="contenedor nav-contenido">
-      <div class="logo">
-        <a href="index.html">COOPERATIVA 16 DE AGOSTO</a>
+  <!-- ================= ENCABEZADO ================= -->
+  <header>
+    <div class="barra-lema">
+      <div class="contenedor">
+        <p>Tu destino y tus encomiendas en las mejores manos. Coop. 16 de Agosto: rápido, seguro y confiable en cada ruta.</p>
       </div>
-      <nav class="menu-derecho">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="acerca.html">Acerca de la Coop</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="horarios.html" class="activo">Horarios</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contáctanos</a></li>
-        </ul>
-      </nav>
+    </div>
+
+    <div class="barra-navegacion">
+      <div class="contenedor nav-contenido">
+        <div class="marca">
+          <a href="index.html" class="enlace-marca">
+            <img src="img/logotipo 16 de agosto .png" alt="Logotipo Cooperativa 16 de Agosto" class="logo-img">
+          </a>
+        </div>
+
+        <!-- ¡BOTÓN DE HAMBURGUESA AÑADIDO AQUÍ! -->
+        <button class="menu-hamburguesa" id="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="menu-derecho">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            <li class="item-desplegable">
+              <a href="#">Acerca de la Coop <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              <ul class="sub-menu">
+                <li><a href="acerca.html">Nuestra historia</a></li>
+                <li><a href="redes.html">Nuestras redes sociales</a></li>
+              </ul>
+            </li>
+            
+            <li class="item-desplegable">
+              <a href="#">Servicios <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              <ul class="sub-menu">
+                <li><a href="encomiendas.html">Encomiendas</a></li>
+              </ul>
+            </li>
+            
+            <li><a href="horarios.html" class="activo">Horarios</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main class="pagina-contenido">
+  <!-- ================= CONTENIDO DE HORARIOS ================= -->
+  <main class="pagina-horarios">
     <div class="contenedor">
-      <div class="tarjeta-blanca">
-        <h1 class="titulo-pagina">Horarios y Frecuencias</h1>
-        <p>Consulta los turnos y rutas diarias de nuestras unidades:</p>
-
-        <table class="tabla-horarios">
-          <thead>
-            <tr>
-              <th>Origen</th>
-              <th>Destino</th>
-              <th>Frecuencia / Salidas</th>
-              <th>Servicio</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Terminal Terrestre</td>
-              <td>Ruta Principal</td>
-              <td>Cada 30 minutos</td>
-              <td>Pasajeros / Encomiendas</td>
-            </tr>
-            <tr>
-              <td>Ruta Interprovincial</td>
-              <td>Destino Regional</td>
-              <td>06:00 - 08:30 - 12:00 - 15:30</td>
-              <td>Directo</td>
-            </tr>
-          </tbody>
-        </table>
+      
+      <div class="cabecera-horarios">
+        <p class="subtitulo-rojo">PLANIFICA TU VIAJE</p>
+        <h1 class="titulo-historia">Nuestras Rutas y Horarios</h1>
+        <p class="parrafo-historia centrado">Conoce los horarios de salida desde nuestras principales terminales. Te recomendamos llegar con 15 minutos de anticipación para abordar con tranquilidad.</p>
       </div>
+
+      <div class="imagen-destacada-horarios">
+        <img src="img/16 de agosto 3 nuevos.png" alt="Nuevas unidades de la Cooperativa" class="img-fluida">
+      </div>
+
+      <div class="layout-servicios-bordo">
+        
+        <!-- Lado Izquierdo: Servicios a bordo -->
+        <div class="columna-servicios">
+          <h3 class="titulo-servicios-bordo">SERVICIOS A BORDO:</h3>
+          <hr class="linea-separadora">
+          <ul class="lista-servicios-bordo">
+            <li><i class="fa-solid fa-wifi"></i> Red wifi Starlink</li>
+            <li><i class="fa-solid fa-plug"></i> Puerto de carga</li>
+            <li><i class="fa-solid fa-tv"></i> Entretenimiento</li>
+            <li><i class="fa-solid fa-chair"></i> Asientos cómodos</li>
+            <li><i class="fa-solid fa-restroom"></i> Baños limpios</li>
+          </ul>
+        </div>
+
+        <!-- Lado Derecho: Consulta de Rutas -->
+        <div class="columna-futuro">
+          <div class="encabezado-rutas-dinamico">
+            <h2>Consulta tus rutas</h2>
+            <p>Selecciona tu ciudad de origen para revisar destinos, horarios referenciales y duración estimada.</p>
+            
+            <div class="alerta-horarios">
+              <i class="fa-solid fa-circle-info"></i>
+              <p>Los horarios pueden cambiar por operación, feriados o turnos extraordinarios. Confirma disponibilidad antes de comprar.</p>
+            </div>
+          </div>
+
+          <div class="tarjeta-celeste-rutas">
+            <label for="origen" class="label-origen">Ciudad de origen</label>
+            
+            <select id="origen" class="select-origen">
+              <option value="cuenca">Oficina de Cuenca</option>
+              <option value="gualaquiza">Oficina de Gualaquiza</option>
+              <option value="gualaceo">Oficina de Gualaceo</option>
+              <option value="elpangui">Oficina de El pangui</option>
+              <option value="loja">Oficina de Loja</option>
+              <option value="limon">Oficina de Limón</option>
+              <option value="macas">Oficina de Macas</option>
+              <option value="sanjuanbosco">Oficina de San Juan Bosco</option>
+            </select>
+
+            <a href="https://wa.me/+593939040601" class="boton-reserva-wa" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i> Reserva tu boleto por WhatsApp
+            </a>
+
+            <div class="lista-rutas-scroll">
+              <div class="item-ruta" data-origen="cuenca">
+                <p class="ruta-destino"><strong>Oficina de Cuenca</strong> ➔ Terminal de Cuenca - Terminal de Gualaquiza</p>
+                <p class="ruta-detalle">Horarios: 5:30 am (Plan de milagro), 10:00 am (Plan de milagro), 2:00 pm (Chiguinda), 4:30 pm (Plan de milagro), 7:00 pm (Plan de milagro)</p>
+                <p class="ruta-detalle">Duración estimada: 5 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="cuenca">
+                <p class="ruta-destino"><strong>Oficina de Cuenca</strong> ➔ Terminal de Cuenca - Terminal de El Panqui</p>
+                <p class="ruta-detalle">Horarios: 8:00 pm (Chiguinda)</p>
+                <p class="ruta-detalle">Duración estimada: 5 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="gualaquiza">
+                <p class="ruta-destino"><strong>Oficina de Gualaquiza</strong> ➔ Terminal de Gualaquiza - Terminal de Cuenca</p>
+                <p class="ruta-detalle">Horarios: 1:30am (Chiguinda), 2:30 am (Plan de milagro), 7:00 am (Plan de milagro), 2:00 pm (Chiguinda), 8:00 pm (Plan de milagro), 10:00 pm (Chiguinda)</p>
+                <p class="ruta-detalle">Duración estimada: 5 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="gualaquiza">
+                <p class="ruta-destino"><strong>Oficina de Gualaquiza</strong> ➔ Terminal de Gualaquiza - Terminal de Macas</p>
+                <p class="ruta-detalle">Horarios: 00:00 am, 8:30 am, 2:00 pm</p>
+                <p class="ruta-detalle">Duración estimada: 6 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="gualaceo">
+                <p class="ruta-destino"><strong>Oficina de Gualaceo</strong> ➔ Terminal de Gualaceo - Terminal de Cuenca</p>
+                <p class="ruta-detalle">Horarios: 11:00 am, 3:00 pm, 5:30 pm, 8:00 pm</p>
+                <p class="ruta-detalle">Duración estimada: 5 horas</p>
+              </div>
+               <div class="item-ruta" data-origen="gualaceo">
+                <p class="ruta-destino"><strong>Oficina de Gualaceo</strong> ➔ Terminal de Gualaceo - Terminal de El Panqui</p>
+                <p class="ruta-detalle">Horarios: 9:00 pm</p>
+                <p class="ruta-detalle">Duración estimada: 6 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="elpangui">
+                <p class="ruta-destino"><strong>Oficina de El pangui</strong> ➔ Terminal de El Pangui - Terminal de Cuenca</p>
+                <p class="ruta-detalle">Horarios: 1:30 am, 7:00 pm</p>
+                <p class="ruta-detalle">Duración estimada: 6 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="limon">
+                <p class="ruta-destino"><strong>Oficina de Limón</strong> ➔ Terminal de Limón - Terminal de Gualaquiza</p>
+                <p class="ruta-detalle">Horarios: 10:40 am, 5:00 pm, 8:30 pm</p>
+                <p class="ruta-detalle">Duración estimada: 3 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="limon">
+                <p class="ruta-destino"><strong>Oficina de Limón</strong> ➔ Terminal de Limón - Terminal de Macas</p>
+                <p class="ruta-detalle">Horarios: 11:15 am, 5:00 pm, 3:00 am</p>
+                <p class="ruta-detalle">Duración estimada: 3 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="loja">
+                <p class="ruta-destino"><strong>Oficina de Loja (Alianza con la Cariamanga)</strong> ➔ Terminal de Loja - Terminal de El Panqui</p>
+                <p class="ruta-detalle">Horarios: 10:30 pm</p>
+                <p class="ruta-detalle">Duración estimada: 4 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="loja">
+                <p class="ruta-destino"><strong>Oficina de Loja (Alianza con la Cariamanga)</strong> ➔ Terminal de Loja - Terminal de Gualaquiza</p>
+                <p class="ruta-detalle">Horarios: 10:30 pm</p>
+                <p class="ruta-detalle">Duración estimada: 4 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="loja">
+                <p class="ruta-destino"><strong>Oficina de Loja (Alianza con la Cariamanga)</strong> ➔ Terminal de Loja - Terminal de Cuenca</p>
+                <p class="ruta-detalle">Horarios: 20h50, 23h50</p>
+                <p class="ruta-detalle">Duración estimada: 9:30 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="macas">
+                <p class="ruta-destino"><strong>Oficina de Macas</strong> ➔ Terminal de Macas - Terminal de Gualaquiza</p>
+                <p class="ruta-detalle">Horarios: 7:30 am, 2:00 pm, 5:20 pm</p>
+                <p class="ruta-detalle">Duración estimada: 6 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="sanjuanbosco">
+                <p class="ruta-destino"><strong>Oficina de San Juan Bosco</strong> ➔ San Juan Bosco - Terminal de Gualaquiza</p>
+                <p class="ruta-detalle">Horarios: ----------</p>
+                <p class="ruta-detalle">Duración estimada: 1:30 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="sanjuanbosco">
+                <p class="ruta-destino"><strong>Oficina de San Juan Bosco</strong> ➔ San Juan Bosco - Terminal de Cuenca</p>
+                <p class="ruta-detalle">Horarios: ----------</p>
+                <p class="ruta-detalle">Duración estimada: 3:00 horas</p>
+              </div>
+              <div class="item-ruta" data-origen="sanjuanbosco">
+                <p class="ruta-destino"><strong>Oficina de San Juan Bosco</strong> ➔ San Juan Bosco - Terminal de Macas</p>
+                <p class="ruta-detalle">Horarios: ----------</p>
+                <p class="ruta-detalle">Duración estimada: 3:30 horas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-imagenes-horarios">
+        <img src="img/horario loja.png" alt="Horario Loja" class="img-horario">
+        <img src="img/horario cuenca.png" alt="Horario Cuenca" class="img-horario">
+        <img src="img/horario macas.png" alt="Horario Macas" class="img-horario">
+        <img src="img/horario el pangui.png" alt="Horario El Pangui" class="img-horario">
+      </div>
+
     </div>
   </main>
-
+  
+  <!-- ================= PIE DE PÁGINA ================= -->
   <footer>
     <div class="contenedor">
       <p>&copy; 2026 Cooperativa de Transportes 16 de Agosto. Todos los derechos reservados.</p>
     </div>
   </footer>
 
+  <!-- ================= SCRIPT PARA EL MENÚ ================= -->
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menu = document.querySelector('.menu-derecho ul'); 
+
+    btnMenu.addEventListener('click', () => {
+      menu.classList.toggle('mostrar-menu');
+    });
+
+    const enlacesDesplegables = document.querySelectorAll('.item-desplegable > a');
+
+    enlacesDesplegables.forEach(enlace => {
+      enlace.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        const subMenu = this.nextElementSibling;
+        subMenu.classList.toggle('mostrar-submenu');
+      });
+    });
+  </script>
 </body>
 </html>
