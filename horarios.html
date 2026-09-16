@@ -47,6 +47,7 @@
               <a href="#">Servicios <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
               <ul class="sub-menu">
                 <li><a href="encomiendas.html">Encomiendas</a></li>
+                <li><a href="rastreodeencomiendas.html">Rastreo de Encomiendas</a></li>
               </ul>
             </li>
             
@@ -221,8 +222,9 @@
     </div>
   </footer>
 
-  <!-- ================= SCRIPT PARA EL MENÚ ================= -->
+  <!-- ================= SCRIPT PARA EL MENÚ Y RUTAS ================= -->
   <script>
+    // 1. Lógica del menú hamburguesa principal
     const btnMenu = document.getElementById('btn-menu');
     const menu = document.querySelector('.menu-derecho ul'); 
 
@@ -230,8 +232,8 @@
       menu.classList.toggle('mostrar-menu');
     });
 
+    // 2. Lógica de los submenús
     const enlacesDesplegables = document.querySelectorAll('.item-desplegable > a');
-
     enlacesDesplegables.forEach(enlace => {
       enlace.addEventListener('click', function(e) {
         e.preventDefault(); 
@@ -239,6 +241,33 @@
         subMenu.classList.toggle('mostrar-submenu');
       });
     });
+
+    // 3. Lógica para el filtro de Horarios y Rutas (¡LO NUEVO!)
+    const selectOrigen = document.getElementById('origen');
+    const todasLasRutas = document.querySelectorAll('.item-ruta');
+
+    // Función que oculta o muestra las rutas dependiendo de lo que elijas
+    function filtrarRutas() {
+      const ciudadElegida = selectOrigen.value; // Agarra el valor (ej: "gualaceo")
+      
+      todasLasRutas.forEach(ruta => {
+        // Compara si la ruta coincide con la ciudad elegida
+        if (ruta.getAttribute('data-origen') === ciudadElegida) {
+          ruta.style.display = 'block'; // La muestra
+        } else {
+          ruta.style.display = 'none'; // La esconde
+        }
+      });
+    }
+
+    // Le decimos a la página que active el filtro si estamos en horarios.html
+    if (selectOrigen) {
+      // Activa el filtro cada vez que tocas el desplegable
+      selectOrigen.addEventListener('change', filtrarRutas);
+      
+      // Corre el filtro una vez al cargar la página para limpiar la lista desde el principio
+      filtrarRutas(); 
+    }
   </script>
 </body>
 </html>

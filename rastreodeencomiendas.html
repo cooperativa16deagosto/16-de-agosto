@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redes Sociales | Cooperativa 16 de Agosto</title>
-    <link rel="icon" type="image/png" href="img/favico 16 de agosto.png">
+  <title>Rastreo de Encomiendas | Cooperativa 16 de Agosto</title>
+  
+  <link rel="icon" type="image/png" href="img/favico 16 de agosto.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,14 +21,12 @@
 
     <div class="barra-navegacion">
       <div class="contenedor nav-contenido">
-        
         <div class="marca">
           <a href="index.html" class="enlace-marca">
             <img src="img/logotipo 16 de agosto .png" alt="Logotipo Cooperativa 16 de Agosto" class="logo-img">
           </a>
         </div>
 
-        <!-- ¡ESTE ES EL BOTÓN QUE FALTABA! -->
         <button class="menu-hamburguesa" id="btn-menu">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -37,20 +36,22 @@
             <li><a href="index.html">Home</a></li>
             
             <li class="item-desplegable">
-              <a href="#" class="activo">Acerca de la Coop <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              <a href="#">Acerca de la Coop <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
               <ul class="sub-menu">
                 <li><a href="acerca.html">Nuestra historia</a></li>
                 <li><a href="redes.html">Nuestras redes sociales</a></li>
               </ul>
             </li>
-
+            
+            <!-- === MENÚ SERVICIOS CORREGIDO === -->
             <li class="item-desplegable">
-              <a href="#">Servicios <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+              <a href="#" class="activo">Servicios <i class="fa-solid fa-caret-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
               <ul class="sub-menu">
                 <li><a href="encomiendas.html">Encomiendas</a></li>
                 <li><a href="rastreodeencomiendas.html">Rastreo de Encomiendas</a></li>
               </ul>
             </li>
+            <!-- ================================ -->
             
             <li><a href="horarios.html">Horarios</a></li>
             <li><a href="noticias.html">Noticias</a></li>
@@ -61,53 +62,24 @@
     </div>
   </header>
 
-  <!-- ================= CONTENIDO DE REDES SOCIALES ================= -->
-  <main class="seccion-redes">
+  <!-- ================= CONTENIDO DE RASTREO (IFRAME) ================= -->
+  <main class="pagina-rastreo" style="padding: 40px 0; background-color: #f8fafc;">
     <div class="contenedor">
       
-      <div class="cabecera-redes">
-        <p class="etiqueta-historia">SÍGUENOS</p>
-        <h1 class="titulo-historia">Nuestra Comunidad Digital</h1>
-        <p class="parrafo-historia centrado">Únete a nuestras plataformas oficiales para enterarte de novedades, horarios especiales y acompañarnos en cada kilómetro de recorrido.</p>
+      <div class="cabecera-rastreo" style="text-align: center; margin-bottom: 30px;">
+        <p class="subtitulo-rojo">SISTEMA INTEGRADO</p>
+        <h1 class="titulo-historia">Rastreo de Encomiendas</h1>
+        <p class="parrafo-historia centrado">Ingresa tu número de guía o cédula a continuación para conocer el estado de tu envío en tiempo real.</p>
       </div>
 
-      <!-- Contenedor de los 3 cuadrados -->
-      <div class="grid-redes">
-        
-        <!-- Cuadro 1: Facebook -->
-        <div class="tarjeta-red">
-          <div class="icono-red facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </div>
-          <h3>Facebook</h3>
-          <p>Encuentra noticias, comunicados oficiales, cambios de horario y atención directa a nuestros pasajeros.</p>
-          <a href="https://www.facebook.com/profile.php?id=100088692571878" class="boton-rojo-servicio" target="_blank">Ir a Facebook</a>
-        </div>
-
-        <!-- Cuadro 2: TikTok -->
-        <div class="tarjeta-red">
-          <div class="icono-red tiktok">
-            <i class="fa-brands fa-tiktok"></i>
-          </div>
-          <h3>TikTok</h3>
-          <p>Descubre nuestros videos cortos, el detrás de escena de nuestras rutas y acompáñanos a bordo de las unidades. ¡No te lo pierdas!</p>
-          <a href="https://www.tiktok.com/@coop16agosto?_r=1&_t=ZS-99ewbxGLC6u" class="boton-rojo-servicio" target="_blank">Ver TikToks</a>
-        </div>
-
-        <!-- Cuadro 3: Instagram -->
-        <div class="tarjeta-red">
-          <div class="icono-red instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </div>
-          <h3>Instagram</h3>
-          <p>Disfruta de las mejores fotografías de nuestra moderna flota y los increíbles paisajes de las rutas ecuatorianas.</p>
-          <a href="https://www.instagram.com/coop.16_de_agosto?stkn=MXVxNmJmcnFwbm01eg==" class="boton-rojo-servicio" target="_blank">Ir a Instagram</a>
-        </div>
-
+      <!-- Aquí es donde ocurre la magia del Iframe -->
+      <div class="contenedor-iframe" style="width: 100%; height: 700px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); background: white;">
+        <iframe src="https://www.busplace.com/soporte/home#/encomiendas" width="100%" height="100%" style="border: none;" title="Sistema de rastreo Busplace"></iframe>
       </div>
+
     </div>
   </main>
-  
+
   <!-- ================= PIE DE PÁGINA ================= -->
   <footer>
     <div class="contenedor">
@@ -117,6 +89,7 @@
 
   <!-- ================= SCRIPT PARA EL MENÚ ================= -->
   <script>
+    // 1. Lógica del menú hamburguesa principal
     const btnMenu = document.getElementById('btn-menu');
     const menu = document.querySelector('.menu-derecho ul'); 
 
@@ -124,8 +97,8 @@
       menu.classList.toggle('mostrar-menu');
     });
 
+    // 2. Lógica de los submenús
     const enlacesDesplegables = document.querySelectorAll('.item-desplegable > a');
-
     enlacesDesplegables.forEach(enlace => {
       enlace.addEventListener('click', function(e) {
         e.preventDefault(); 
